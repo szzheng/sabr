@@ -7,23 +7,59 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7307D0DD1BF01C3600F68554 /* Siberian Husky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7307D0DC1BF01C3600F68554 /* Siberian Husky.jpg */; };
+		7307D1561BF0469800F68554 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7307D1551BF0469800F68554 /* Main.storyboard */; };
+		7307D15C1BF0567200F68554 /* FriendsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7307D15B1BF0567200F68554 /* FriendsCollectionViewController.swift */; };
+		7307D15E1BF0568600F68554 /* FriendsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7307D15D1BF0568600F68554 /* FriendsCollectionViewCell.swift */; };
+		7307D1601BF0793700F68554 /* EnterNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7307D15F1BF0793700F68554 /* EnterNameViewController.swift */; };
+		7307D1621BF0802500F68554 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7307D1611BF0802500F68554 /* User.swift */; };
 		73CA501E1BEF333D00B4E216 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CA501D1BEF333D00B4E216 /* AppDelegate.swift */; };
 		73CA50201BEF333D00B4E216 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CA501F1BEF333D00B4E216 /* ViewController.swift */; };
-		73CA50231BEF333D00B4E216 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73CA50211BEF333D00B4E216 /* Main.storyboard */; };
 		73CA50261BEF333D00B4E216 /* sabr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 73CA50241BEF333D00B4E216 /* sabr.xcdatamodeld */; };
 		73CA50281BEF333D00B4E216 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73CA50271BEF333D00B4E216 /* Assets.xcassets */; };
 		73CA502B1BEF333D00B4E216 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73CA50291BEF333D00B4E216 /* LaunchScreen.storyboard */; };
+		73CA50341BEF33B600B4E216 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CA50321BEF33B600B4E216 /* Bolts.framework */; };
+		73CA50351BEF33B600B4E216 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CA50331BEF33B600B4E216 /* Parse.framework */; };
+		73CA50371BEF341F00B4E216 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CA50361BEF341F00B4E216 /* AudioToolbox.framework */; };
+		73CA50391BEF342900B4E216 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CA50381BEF342900B4E216 /* CFNetwork.framework */; };
+		73CA503B1BEF343100B4E216 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CA503A1BEF343100B4E216 /* CoreGraphics.framework */; };
+		73CA503D1BEF343800B4E216 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CA503C1BEF343800B4E216 /* QuartzCore.framework */; };
+		73CA503F1BEF343E00B4E216 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CA503E1BEF343E00B4E216 /* Security.framework */; };
+		73CA50411BEF344600B4E216 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CA50401BEF344600B4E216 /* StoreKit.framework */; };
+		73CA50431BEF344D00B4E216 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CA50421BEF344D00B4E216 /* SystemConfiguration.framework */; };
+		73CA50451BEF345500B4E216 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CA50441BEF345500B4E216 /* libz.tbd */; };
+		73CA50471BEF345E00B4E216 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CA50461BEF345E00B4E216 /* libsqlite3.tbd */; };
+		73CA50491BEF346B00B4E216 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CA50481BEF346B00B4E216 /* Accounts.framework */; };
+		73CA504B1BEF347100B4E216 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CA504A1BEF347100B4E216 /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7307D0DC1BF01C3600F68554 /* Siberian Husky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Siberian Husky.jpg"; sourceTree = "<group>"; };
+		7307D1551BF0469800F68554 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		7307D15B1BF0567200F68554 /* FriendsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsCollectionViewController.swift; sourceTree = "<group>"; };
+		7307D15D1BF0568600F68554 /* FriendsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsCollectionViewCell.swift; sourceTree = "<group>"; };
+		7307D15F1BF0793700F68554 /* EnterNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterNameViewController.swift; sourceTree = "<group>"; };
+		7307D1611BF0802500F68554 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		73CA501A1BEF333D00B4E216 /* sabr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sabr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73CA501D1BEF333D00B4E216 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73CA501F1BEF333D00B4E216 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		73CA50221BEF333D00B4E216 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		73CA50251BEF333D00B4E216 /* sabr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = sabr.xcdatamodel; sourceTree = "<group>"; };
 		73CA50271BEF333D00B4E216 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73CA502A1BEF333D00B4E216 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73CA502C1BEF333D00B4E216 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73CA50321BEF33B600B4E216 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		73CA50331BEF33B600B4E216 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		73CA50361BEF341F00B4E216 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		73CA50381BEF342900B4E216 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		73CA503A1BEF343100B4E216 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		73CA503C1BEF343800B4E216 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		73CA503E1BEF343E00B4E216 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		73CA50401BEF344600B4E216 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		73CA50421BEF344D00B4E216 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		73CA50441BEF345500B4E216 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		73CA50461BEF345E00B4E216 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		73CA50481BEF346B00B4E216 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		73CA504A1BEF347100B4E216 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +67,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73CA504B1BEF347100B4E216 /* Social.framework in Frameworks */,
+				73CA50491BEF346B00B4E216 /* Accounts.framework in Frameworks */,
+				73CA50471BEF345E00B4E216 /* libsqlite3.tbd in Frameworks */,
+				73CA50451BEF345500B4E216 /* libz.tbd in Frameworks */,
+				73CA50431BEF344D00B4E216 /* SystemConfiguration.framework in Frameworks */,
+				73CA50411BEF344600B4E216 /* StoreKit.framework in Frameworks */,
+				73CA503F1BEF343E00B4E216 /* Security.framework in Frameworks */,
+				73CA503D1BEF343800B4E216 /* QuartzCore.framework in Frameworks */,
+				73CA503B1BEF343100B4E216 /* CoreGraphics.framework in Frameworks */,
+				73CA50391BEF342900B4E216 /* CFNetwork.framework in Frameworks */,
+				73CA50371BEF341F00B4E216 /* AudioToolbox.framework in Frameworks */,
+				73CA50351BEF33B600B4E216 /* Parse.framework in Frameworks */,
+				73CA50341BEF33B600B4E216 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,13 +107,40 @@
 			children = (
 				73CA501D1BEF333D00B4E216 /* AppDelegate.swift */,
 				73CA501F1BEF333D00B4E216 /* ViewController.swift */,
-				73CA50211BEF333D00B4E216 /* Main.storyboard */,
+				7307D1551BF0469800F68554 /* Main.storyboard */,
+				7307D1611BF0802500F68554 /* User.swift */,
+				7307D15F1BF0793700F68554 /* EnterNameViewController.swift */,
+				7307D15B1BF0567200F68554 /* FriendsCollectionViewController.swift */,
+				7307D15D1BF0568600F68554 /* FriendsCollectionViewCell.swift */,
 				73CA50271BEF333D00B4E216 /* Assets.xcassets */,
 				73CA50291BEF333D00B4E216 /* LaunchScreen.storyboard */,
 				73CA502C1BEF333D00B4E216 /* Info.plist */,
 				73CA50241BEF333D00B4E216 /* sabr.xcdatamodeld */,
+				7307D0DC1BF01C3600F68554 /* Siberian Husky.jpg */,
+				73CA504C1BEF34BC00B4E216 /* Frameworks */,
 			);
 			path = sabr;
+			sourceTree = "<group>";
+		};
+		73CA504C1BEF34BC00B4E216 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73CA504A1BEF347100B4E216 /* Social.framework */,
+				73CA50481BEF346B00B4E216 /* Accounts.framework */,
+				73CA50461BEF345E00B4E216 /* libsqlite3.tbd */,
+				73CA50441BEF345500B4E216 /* libz.tbd */,
+				73CA50421BEF344D00B4E216 /* SystemConfiguration.framework */,
+				73CA50401BEF344600B4E216 /* StoreKit.framework */,
+				73CA503E1BEF343E00B4E216 /* Security.framework */,
+				73CA503C1BEF343800B4E216 /* QuartzCore.framework */,
+				73CA503A1BEF343100B4E216 /* CoreGraphics.framework */,
+				73CA50381BEF342900B4E216 /* CFNetwork.framework */,
+				73CA50361BEF341F00B4E216 /* AudioToolbox.framework */,
+				73CA50321BEF33B600B4E216 /* Bolts.framework */,
+				73CA50331BEF33B600B4E216 /* Parse.framework */,
+			);
+			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +203,8 @@
 			files = (
 				73CA502B1BEF333D00B4E216 /* LaunchScreen.storyboard in Resources */,
 				73CA50281BEF333D00B4E216 /* Assets.xcassets in Resources */,
-				73CA50231BEF333D00B4E216 /* Main.storyboard in Resources */,
+				7307D0DD1BF01C3600F68554 /* Siberian Husky.jpg in Resources */,
+				7307D1561BF0469800F68554 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +215,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7307D1601BF0793700F68554 /* EnterNameViewController.swift in Sources */,
 				73CA50201BEF333D00B4E216 /* ViewController.swift in Sources */,
 				73CA50261BEF333D00B4E216 /* sabr.xcdatamodeld in Sources */,
+				7307D15E1BF0568600F68554 /* FriendsCollectionViewCell.swift in Sources */,
+				7307D15C1BF0567200F68554 /* FriendsCollectionViewController.swift in Sources */,
 				73CA501E1BEF333D00B4E216 /* AppDelegate.swift in Sources */,
+				7307D1621BF0802500F68554 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		73CA50211BEF333D00B4E216 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				73CA50221BEF333D00B4E216 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		73CA50291BEF333D00B4E216 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -251,7 +324,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = sabr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sabr.sabr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -262,7 +340,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = sabr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sabr.sabr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -288,6 +371,7 @@
 				73CA50311BEF333D00B4E216 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
