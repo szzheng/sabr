@@ -9,6 +9,8 @@
 import UIKit
 import Parse
 
+var newUser = User()
+
 class ViewController: UIViewController, UITextFieldDelegate {
     
     var activityIndicator = UIActivityIndicatorView()
@@ -28,7 +30,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func displayAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
-            self.dismissViewControllerAnimated(true, completion: nil)
         }))
         
         self.presentViewController(alert, animated: true, completion: nil)
@@ -74,7 +75,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         self.performSegueWithIdentifier("signup", sender: self)
         
-        /*
+   /*
         // bad sign up info
         if (username.text == "" || password.text == "") {
 
@@ -106,8 +107,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     self.displayAlert("Failed signup", message: self.errorMessage)
                 }
             })
-        }
-*/
+        } */
+
     }
     
     override func viewDidLoad() {
@@ -119,7 +120,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewDidAppear(animated: Bool) {
-        var currentUser = PFUser.currentUser()
+        //var currentUser = PFUser.currentUser()
         /*
         if currentUser != nil {
             self.performSegueWithIdentifier("login", sender: self)

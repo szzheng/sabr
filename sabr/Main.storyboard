@@ -150,25 +150,36 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Of5-qn-dr1">
-                                <rect key="frame" x="156" y="236" width="62" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="62" id="EmI-F6-87a"/>
-                                    <constraint firstAttribute="height" constant="30" id="yy2-Gv-nVC"/>
-                                </constraints>
-                                <state key="normal" title="Continue"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cu-3Z-rIY">
                                 <rect key="frame" x="158" y="285" width="58" height="30"/>
                                 <animations/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="58" id="7is-hC-czR"/>
+                                    <constraint firstAttribute="height" constant="30" id="Zte-1D-szL"/>
                                     <constraint firstAttribute="height" constant="30" id="gpI-jG-v06"/>
                                     <constraint firstAttribute="width" constant="58" id="sh3-VX-Nym"/>
                                 </constraints>
                                 <state key="normal" title="Go Back"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gpI-jG-v06"/>
+                                        <exclude reference="sh3-VX-Nym"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="goBack:" destination="OWi-8P-CsY" eventType="touchUpInside" id="h19-ZZ-CTb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="178-wR-qFb">
+                                <rect key="frame" x="156" y="247" width="62" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="OSM-KC-Sdz"/>
+                                    <constraint firstAttribute="width" constant="62" id="ccK-ll-R2F"/>
+                                </constraints>
+                                <state key="normal" title="Continue"/>
+                                <connections>
+                                    <action selector="continueWithName:" destination="OWi-8P-CsY" eventType="touchUpInside" id="8J4-W7-AIV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -177,28 +188,116 @@
                         <constraints>
                             <constraint firstItem="xJw-0a-bFe" firstAttribute="trailing" secondItem="ewC-No-YVO" secondAttribute="trailingMargin" id="4fV-sX-R3y"/>
                             <constraint firstItem="xJw-0a-bFe" firstAttribute="leading" secondItem="NXu-Sj-1hH" secondAttribute="trailing" constant="15" id="5kk-2y-LLb"/>
-                            <constraint firstItem="Of5-qn-dr1" firstAttribute="top" secondItem="xJw-0a-bFe" secondAttribute="bottom" constant="29" id="9gh-XT-uou"/>
                             <constraint firstItem="uVQ-uW-tlW" firstAttribute="top" secondItem="yMu-cF-b3V" secondAttribute="bottom" constant="76" id="ACo-q1-LoS"/>
                             <constraint firstItem="6cu-3Z-rIY" firstAttribute="centerX" secondItem="ewC-No-YVO" secondAttribute="centerX" id="DGe-s9-B3Q"/>
+                            <constraint firstItem="6cu-3Z-rIY" firstAttribute="centerX" secondItem="ewC-No-YVO" secondAttribute="centerX" id="Faz-3v-ae5"/>
                             <constraint firstItem="NXu-Sj-1hH" firstAttribute="top" secondItem="uVQ-uW-tlW" secondAttribute="bottom" constant="19" id="G5M-cK-gSC"/>
                             <constraint firstItem="NXu-Sj-1hH" firstAttribute="leading" secondItem="ewC-No-YVO" secondAttribute="leadingMargin" id="HN4-Ri-rp4"/>
-                            <constraint firstItem="Of5-qn-dr1" firstAttribute="centerX" secondItem="ewC-No-YVO" secondAttribute="centerX" id="YRZ-Bh-SE9"/>
-                            <constraint firstItem="6cu-3Z-rIY" firstAttribute="top" secondItem="Of5-qn-dr1" secondAttribute="bottom" constant="19" id="eft-Tn-uQd"/>
+                            <constraint firstItem="178-wR-qFb" firstAttribute="top" secondItem="xJw-0a-bFe" secondAttribute="bottom" constant="40" id="Hd4-Ib-9nN"/>
+                            <constraint firstItem="6cu-3Z-rIY" firstAttribute="top" secondItem="178-wR-qFb" secondAttribute="bottom" constant="8" id="W8R-FW-1qD"/>
+                            <constraint firstItem="178-wR-qFb" firstAttribute="centerX" secondItem="ewC-No-YVO" secondAttribute="centerX" id="WDC-r1-p0K"/>
                             <constraint firstItem="xJw-0a-bFe" firstAttribute="top" secondItem="uVQ-uW-tlW" secondAttribute="bottom" constant="19" id="fJ6-1x-Hb6"/>
                             <constraint firstItem="xJw-0a-bFe" firstAttribute="width" secondItem="NXu-Sj-1hH" secondAttribute="width" id="prG-ih-Qm3"/>
                             <constraint firstItem="uVQ-uW-tlW" firstAttribute="centerX" secondItem="ewC-No-YVO" secondAttribute="centerX" id="rNu-VP-f4T"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="DGe-s9-B3Q"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="firstName" destination="NXu-Sj-1hH" id="wUC-8i-Awf"/>
                         <outlet property="lastName" destination="xJw-0a-bFe" id="Cnh-Vs-ru7"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="fromEnterNameSegueToLogin" id="XaM-XE-Osz"/>
+                        <segue destination="xHj-8k-RF1" kind="show" identifier="fromEnterNameSegueToEnterEmail" id="YSJ-mk-bbk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yWd-EO-Udd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1052.5" y="882.5"/>
+            <point key="canvasLocation" x="-1030.5" y="882.5"/>
+        </scene>
+        <!--Enter Email Address View Controller-->
+        <scene sceneID="xVb-I1-wJf">
+            <objects>
+                <viewController id="xHj-8k-RF1" customClass="EnterEmailAddressViewController" customModule="sabr" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mXF-n1-hD0"/>
+                        <viewControllerLayoutGuide type="bottom" id="LgO-xQ-844"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ajg-XK-6jv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter Email Address:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7m0-gu-Z1c">
+                                <rect key="frame" x="70" y="112" width="225" height="24"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="225" id="NCi-UW-DjV"/>
+                                    <constraint firstAttribute="height" constant="24" id="gHp-GH-nYU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1TH-f2-sdE">
+                                <rect key="frame" x="70" y="178" width="225" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Exs-Kb-H9p"/>
+                                    <constraint firstAttribute="width" constant="225" id="rgf-Hf-s6X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOj-gw-hBK">
+                                <rect key="frame" x="151" y="240" width="62" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="1cO-1q-CX7"/>
+                                    <constraint firstAttribute="height" constant="30" id="Q6L-i1-8bB"/>
+                                </constraints>
+                                <state key="normal" title="Continue"/>
+                                <connections>
+                                    <action selector="continueWithEmail:" destination="xHj-8k-RF1" eventType="touchUpInside" id="fRl-AZ-AuU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJD-34-XN8">
+                                <rect key="frame" x="153" y="278" width="58" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="58" id="DTK-TC-VLE"/>
+                                    <constraint firstAttribute="height" constant="30" id="Joz-cI-B2S"/>
+                                </constraints>
+                                <state key="normal" title="Go Back"/>
+                                <connections>
+                                    <action selector="goBack:" destination="xHj-8k-RF1" eventType="touchUpInside" id="rJB-Re-KEc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1TH-f2-sdE" firstAttribute="top" secondItem="7m0-gu-Z1c" secondAttribute="bottom" constant="42" id="3L5-eX-MFZ"/>
+                            <constraint firstItem="1TH-f2-sdE" firstAttribute="centerX" secondItem="Ajg-XK-6jv" secondAttribute="centerX" id="RWx-48-vg5"/>
+                            <constraint firstItem="7m0-gu-Z1c" firstAttribute="top" secondItem="mXF-n1-hD0" secondAttribute="bottom" constant="92" id="T9G-lr-bu0"/>
+                            <constraint firstItem="7m0-gu-Z1c" firstAttribute="centerX" secondItem="Ajg-XK-6jv" secondAttribute="centerX" id="ckO-Nr-dr5"/>
+                            <constraint firstItem="BJD-34-XN8" firstAttribute="centerX" secondItem="Ajg-XK-6jv" secondAttribute="centerX" id="eFs-7l-SoR"/>
+                            <constraint firstItem="gOj-gw-hBK" firstAttribute="top" secondItem="1TH-f2-sdE" secondAttribute="bottom" constant="32" id="f6x-y4-WzM"/>
+                            <constraint firstItem="gOj-gw-hBK" firstAttribute="centerX" secondItem="Ajg-XK-6jv" secondAttribute="centerX" id="mfd-vs-juv"/>
+                            <constraint firstItem="BJD-34-XN8" firstAttribute="top" secondItem="gOj-gw-hBK" secondAttribute="bottom" constant="8" id="zrD-Nr-tFF"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="emailAddress" destination="1TH-f2-sdE" id="xbQ-aR-ByH"/>
+                        <segue destination="OWi-8P-CsY" kind="show" identifier="fromEnterEmailSegueToEnterName" id="kUN-C0-BPJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ltc-cf-k7R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-534.5" y="882.5"/>
         </scene>
         <!--Friends-->
         <scene sceneID="YYt-x2-rMU">
@@ -359,7 +458,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wY9-8J-d9O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-600.5" y="129.5"/>
+            <point key="canvasLocation" x="-534.5" y="69.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NcQ-yQ-6Ir">
@@ -385,7 +484,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RKt-91-yrw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1052.5" y="129.5"/>
+            <point key="canvasLocation" x="-1030.5" y="69.5"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="kUN-C0-BPJ"/>
+    </inferredMetricsTieBreakers>
 </document>

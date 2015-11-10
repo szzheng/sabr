@@ -13,6 +13,7 @@
 		7307D15E1BF0568600F68554 /* FriendsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7307D15D1BF0568600F68554 /* FriendsCollectionViewCell.swift */; };
 		7307D1601BF0793700F68554 /* EnterNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7307D15F1BF0793700F68554 /* EnterNameViewController.swift */; };
 		7307D1621BF0802500F68554 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7307D1611BF0802500F68554 /* User.swift */; };
+		7307D1661BF19E8500F68554 /* EnterEmailAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7307D1651BF19E8500F68554 /* EnterEmailAddressViewController.swift */; };
 		73CA501E1BEF333D00B4E216 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CA501D1BEF333D00B4E216 /* AppDelegate.swift */; };
 		73CA50201BEF333D00B4E216 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CA501F1BEF333D00B4E216 /* ViewController.swift */; };
 		73CA50261BEF333D00B4E216 /* sabr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 73CA50241BEF333D00B4E216 /* sabr.xcdatamodeld */; };
@@ -40,6 +41,7 @@
 		7307D15D1BF0568600F68554 /* FriendsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsCollectionViewCell.swift; sourceTree = "<group>"; };
 		7307D15F1BF0793700F68554 /* EnterNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterNameViewController.swift; sourceTree = "<group>"; };
 		7307D1611BF0802500F68554 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7307D1651BF19E8500F68554 /* EnterEmailAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnterEmailAddressViewController.swift; path = ../EnterEmailAddressViewController.swift; sourceTree = "<group>"; };
 		73CA501A1BEF333D00B4E216 /* sabr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sabr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73CA501D1BEF333D00B4E216 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73CA501F1BEF333D00B4E216 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7307D1671BF19E9700F68554 /* Signup View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7307D1651BF19E8500F68554 /* EnterEmailAddressViewController.swift */,
+				7307D15F1BF0793700F68554 /* EnterNameViewController.swift */,
+			);
+			name = "Signup View Controllers";
+			sourceTree = "<group>";
+		};
 		73CA50111BEF333D00B4E216 = {
 			isa = PBXGroup;
 			children = (
@@ -109,7 +120,7 @@
 				73CA501F1BEF333D00B4E216 /* ViewController.swift */,
 				7307D1551BF0469800F68554 /* Main.storyboard */,
 				7307D1611BF0802500F68554 /* User.swift */,
-				7307D15F1BF0793700F68554 /* EnterNameViewController.swift */,
+				7307D1671BF19E9700F68554 /* Signup View Controllers */,
 				7307D15B1BF0567200F68554 /* FriendsCollectionViewController.swift */,
 				7307D15D1BF0568600F68554 /* FriendsCollectionViewCell.swift */,
 				73CA50271BEF333D00B4E216 /* Assets.xcassets */,
@@ -218,6 +229,7 @@
 				7307D1601BF0793700F68554 /* EnterNameViewController.swift in Sources */,
 				73CA50201BEF333D00B4E216 /* ViewController.swift in Sources */,
 				73CA50261BEF333D00B4E216 /* sabr.xcdatamodeld in Sources */,
+				7307D1661BF19E8500F68554 /* EnterEmailAddressViewController.swift in Sources */,
 				7307D15E1BF0568600F68554 /* FriendsCollectionViewCell.swift in Sources */,
 				7307D15C1BF0567200F68554 /* FriendsCollectionViewController.swift in Sources */,
 				73CA501E1BEF333D00B4E216 /* AppDelegate.swift in Sources */,

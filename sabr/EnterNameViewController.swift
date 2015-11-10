@@ -6,13 +6,27 @@
 //  Copyright © 2015 sabr. All rights reserved.
 //
 
-import Parse
 import UIKit
 
 class EnterNameViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var firstName: UITextField!
     @IBOutlet var lastName: UITextField!
+    
+    @IBAction func continueWithName(sender: AnyObject) {
+
+        if (firstName.text == "" || lastName.text == "") {
+            let alert = UIAlertController(title: "Missing name field(s)", message: "Please fill out both first and last names", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
+            }))
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+        } else {
+            newUser.setName(firstName.text!, lastName: lastName.text!)
+            performSegueWithIdentifier("fromEnterNameSegueToEnterEmail", sender: self)
+        }
+
+    }
     
     @IBAction func goBack(sender: AnyObject) {
         performSegueWithIdentifier("fromEnterNameSegueToLogin", sender: self)
