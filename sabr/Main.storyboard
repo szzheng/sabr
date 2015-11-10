@@ -230,8 +230,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter Email Address:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7m0-gu-Z1c">
-                                <rect key="frame" x="70" y="112" width="225" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Email Address:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7m0-gu-Z1c">
+                                <rect key="frame" x="75" y="112" width="225" height="24"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="225" id="NCi-UW-DjV"/>
@@ -241,8 +241,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1TH-f2-sdE">
-                                <rect key="frame" x="70" y="178" width="225" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1TH-f2-sdE">
+                                <rect key="frame" x="75" y="178" width="225" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Exs-Kb-H9p"/>
@@ -251,8 +251,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOj-gw-hBK">
-                                <rect key="frame" x="151" y="240" width="62" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOj-gw-hBK">
+                                <rect key="frame" x="156.5" y="240" width="62" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="62" id="1cO-1q-CX7"/>
@@ -263,8 +263,8 @@
                                     <action selector="continueWithEmail:" destination="xHj-8k-RF1" eventType="touchUpInside" id="fRl-AZ-AuU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJD-34-XN8">
-                                <rect key="frame" x="153" y="278" width="58" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJD-34-XN8">
+                                <rect key="frame" x="158.5" y="278" width="58" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="58" id="DTK-TC-VLE"/>
@@ -293,11 +293,94 @@
                     <connections>
                         <outlet property="emailAddress" destination="1TH-f2-sdE" id="xbQ-aR-ByH"/>
                         <segue destination="OWi-8P-CsY" kind="show" identifier="fromEnterEmailSegueToEnterName" id="kUN-C0-BPJ"/>
+                        <segue destination="jES-wP-OE9" kind="show" identifier="continueWithEmail" id="csa-a3-xZL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ltc-cf-k7R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-534.5" y="882.5"/>
+        </scene>
+        <!--Choose Password View Controller-->
+        <scene sceneID="UZM-BO-MHU">
+            <objects>
+                <viewController id="jES-wP-OE9" customClass="ChoosePasswordViewController" customModule="sabr" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4th-ot-lt1"/>
+                        <viewControllerLayoutGuide type="bottom" id="O1q-cz-jv1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4hk-E4-zPf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Password:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyk-5R-s62">
+                                <rect key="frame" x="84" y="107" width="206" height="32"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="206" id="XyV-WE-OSB"/>
+                                    <constraint firstAttribute="height" constant="32" id="xRT-YN-cfb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M4J-To-tcI">
+                                <rect key="frame" x="63" y="170" width="249" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ArR-Jm-b89"/>
+                                    <constraint firstAttribute="width" constant="249" id="zvO-wM-yQy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3e-uB-Da5">
+                                <rect key="frame" x="156" y="227" width="62" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="CZM-l8-Tc5"/>
+                                    <constraint firstAttribute="height" constant="30" id="PSE-C5-z2p"/>
+                                </constraints>
+                                <state key="normal" title="Continue"/>
+                                <connections>
+                                    <action selector="continueWithPassword:" destination="jES-wP-OE9" eventType="touchUpInside" id="jhH-Y9-P4n"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0y7-Ex-NFG">
+                                <rect key="frame" x="158" y="265" width="58" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Fsk-pT-nAi"/>
+                                    <constraint firstAttribute="width" constant="58" id="jdl-JY-2Yz"/>
+                                </constraints>
+                                <state key="normal" title="Go Back"/>
+                                <connections>
+                                    <action selector="goBack:" destination="jES-wP-OE9" eventType="touchUpInside" id="2zh-Sl-SSJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="I3e-uB-Da5" firstAttribute="centerX" secondItem="4hk-E4-zPf" secondAttribute="centerX" id="S4y-ho-Gkg"/>
+                            <constraint firstItem="0y7-Ex-NFG" firstAttribute="top" secondItem="I3e-uB-Da5" secondAttribute="bottom" constant="8" id="UIV-ml-AO0"/>
+                            <constraint firstItem="M4J-To-tcI" firstAttribute="centerX" secondItem="4hk-E4-zPf" secondAttribute="centerX" id="WTe-o7-CuE"/>
+                            <constraint firstItem="iyk-5R-s62" firstAttribute="top" secondItem="4th-ot-lt1" secondAttribute="bottom" constant="87" id="gc7-lN-ZUi"/>
+                            <constraint firstItem="I3e-uB-Da5" firstAttribute="top" secondItem="M4J-To-tcI" secondAttribute="bottom" constant="27" id="kmI-Yk-hZo"/>
+                            <constraint firstItem="0y7-Ex-NFG" firstAttribute="centerX" secondItem="4hk-E4-zPf" secondAttribute="centerX" id="lyt-HV-pfO"/>
+                            <constraint firstItem="M4J-To-tcI" firstAttribute="top" secondItem="iyk-5R-s62" secondAttribute="bottom" constant="31" id="xXY-eU-t1L"/>
+                            <constraint firstItem="iyk-5R-s62" firstAttribute="centerX" secondItem="4hk-E4-zPf" secondAttribute="centerX" id="zwv-LD-QtM"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="password" destination="M4J-To-tcI" id="Eby-A2-05h"/>
+                        <segue destination="xHj-8k-RF1" kind="show" identifier="fromChoosePasswordSegueToEnterEmail" id="yLu-2k-eAT"/>
+                        <segue destination="hvf-oe-7Yg" kind="show" identifier="continueWithPassword" id="m6p-w7-qC6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z3e-Jl-tYs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-44.5" y="882.5"/>
         </scene>
         <!--Friends-->
         <scene sceneID="YYt-x2-rMU">
@@ -458,7 +541,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wY9-8J-d9O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-534.5" y="69.5"/>
+            <point key="canvasLocation" x="547.5" y="69.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NcQ-yQ-6Ir">
@@ -484,10 +567,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RKt-91-yrw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1030.5" y="69.5"/>
+            <point key="canvasLocation" x="55.5" y="69.5"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="kUN-C0-BPJ"/>
+        <segue reference="yLu-2k-eAT"/>
+        <segue reference="m6p-w7-qC6"/>
     </inferredMetricsTieBreakers>
 </document>
