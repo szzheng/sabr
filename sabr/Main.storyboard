@@ -76,7 +76,7 @@
                                 </constraints>
                                 <state key="normal" title="Having Trouble?"/>
                                 <connections>
-                                    <action selector="havingTrouble:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u85-P7-vPU"/>
+                                    <action selector="havingTrouble:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dht-Av-BZL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -681,7 +681,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mC0-UN-i6i"/>
         <segue reference="yLu-2k-eAT"/>
+        <segue reference="mC0-UN-i6i"/>
     </inferredMetricsTieBreakers>
 </document>

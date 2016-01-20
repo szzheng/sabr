@@ -19,6 +19,7 @@ class SetProfilePhotoViewController: UIViewController, UINavigationControllerDel
     var image: UIImage!     // image for profile picture
     
     
+    
     /*
      * Action to select photo for profile picture
      */
@@ -48,6 +49,8 @@ class SetProfilePhotoViewController: UIViewController, UINavigationControllerDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("hi")
         
         initials.text = "SZ"    // placeholder text
         

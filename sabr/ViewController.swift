@@ -37,6 +37,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var username: UITextField!
     @IBOutlet var password: UITextField!
     
+    @IBAction func havingTrouble(sender: AnyObject) {
+        performSegueWithIdentifier("testSegue", sender: self)
+    }
     @IBAction func logIn(sender: AnyObject) {
         
         // bad log in info
@@ -65,9 +68,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 }
             })
         }
-    }
-    
-    @IBAction func havingTrouble(sender: AnyObject) {
     }
     
     @IBAction func signUp(sender: AnyObject) {

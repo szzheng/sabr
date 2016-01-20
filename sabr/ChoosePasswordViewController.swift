@@ -26,7 +26,7 @@ class ChoosePasswordViewController: UIViewController, UITextFieldDelegate {
             
         // Good Password
         } else {
-            
+
             activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 50, 50))
             activityIndicator.center = self.view.center
             activityIndicator.hidesWhenStopped = true
@@ -39,6 +39,7 @@ class ChoosePasswordViewController: UIViewController, UITextFieldDelegate {
             user.password = password.text
             
             activityIndicator.stopAnimating()
+            UIApplication.sharedApplication().endIgnoringInteractionEvents()
             
             performSegueWithIdentifier("continueWithPassword", sender: self)
         }
@@ -50,6 +51,9 @@ class ChoosePasswordViewController: UIViewController, UITextFieldDelegate {
         performSegueWithIdentifier("fromChoosePasswordSegueToEnterEmail", sender: self)
     }
     
+    @IBAction func testSegue(sender: AnyObject) {
+        performSegueWithIdentifier("testSegue", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

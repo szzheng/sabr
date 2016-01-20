@@ -104,11 +104,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "sabr/CropPhotoViewController.swift"
-            timestampString = "474877680.905494"
+            timestampString = "474880523.251306"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "364"
-            endingLineNumber = "364"
+            startingLineNumber = "365"
+            endingLineNumber = "365"
             landmarkName = "scrollViewDidZoom(_:)"
             landmarkType = "5">
          </BreakpointContent>
