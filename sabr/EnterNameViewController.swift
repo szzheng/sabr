@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import Parse
 
 class EnterNameViewController: UIViewController, UITextFieldDelegate {
 
+    var newUser: User!
+    var newPFUser: PFUser!
+    
     @IBOutlet var firstName: UITextField!
     @IBOutlet var lastName: UITextField!
 
@@ -42,6 +46,9 @@ class EnterNameViewController: UIViewController, UITextFieldDelegate {
 
         // Do any additional setup after loading the view.
         
+        newUser = User()
+        newPFUser = PFUser()
+        
         // Allow keyboard to return
         self.firstName.delegate = self
         self.lastName.delegate = self
@@ -53,15 +60,21 @@ class EnterNameViewController: UIViewController, UITextFieldDelegate {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if (segue.identifier == "fromEnterNameSegueToEnterEmail") {
+            let nextView = segue.destinationViewController as! EnterEmailAddressViewController
+            nextView.newUser = newUser
+            nextView.newPFUser = newPFUser
+        }
     }
-    */
+
     
     // Allow keyboard to return if outside keyboard is pressed
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {

@@ -9,9 +9,12 @@
 import UIKit
 import Parse
 
-var user = PFUser()
 
 class EnterEmailAddressViewController: UIViewController, UITextFieldDelegate {
+    
+    var newUser: User!
+    var newPFUser: PFUser!
+    
     
     let temporaryPassword = "abc123"
     var activityIndicator = UIActivityIndicatorView()
@@ -42,17 +45,18 @@ class EnterEmailAddressViewController: UIViewController, UITextFieldDelegate {
             UIApplication.sharedApplication().beginIgnoringInteractionEvents()
             
             // Create new user
-            user = PFUser()
-            user.username = emailAddress.text
-            user.password = temporaryPassword
-            user.email = emailAddress.text
+            newPFUser = PFUser()
+            newPFUser.username = emailAddress.text
+            newPFUser.password = temporaryPassword
+            newPFUser.email = emailAddress.text
             // other fields can be set just like with PFObject
             //user["phone"] = "415-392-0202"
-            user["firstname"] = newUser.firstName
-            user["lastname"] = newUser.lastName
+            newPFUser["firstname"] = newUser.firstName
+            newPFUser["lastname"] = newUser.lastName
+            
             
             // Sign user up into Parse database
-            user.signUpInBackgroundWithBlock({ (sucess, error) -> Void in
+            newPFUser.signUpInBackgroundWithBlock({ (success, error) -> Void in
                 self.activityIndicator.stopAnimating()
                 UIApplication.sharedApplication().endIgnoringInteractionEvents()
                 
@@ -99,7 +103,6 @@ class EnterEmailAddressViewController: UIViewController, UITextFieldDelegate {
 
         // Do any additional setup after loading the view.
         
-        
         self.emailAddress.delegate = self  // Allow keyboard to return
     }
 
@@ -120,14 +123,19 @@ class EnterEmailAddressViewController: UIViewController, UITextFieldDelegate {
     }
 
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if (segue.identifier == "continueWithEmail") {
+            let nextView = segue.destinationViewController as! ChoosePasswordViewController
+            nextView.newUser = newUser
+            nextView.newPFUser = newPFUser
+        }
     }
-    */
+
 
 }

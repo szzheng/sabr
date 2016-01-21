@@ -7,18 +7,32 @@
 //
 
 import UIKit
+import Parse
 
 /*
  * View controller to set profile picture
  */
 class SetProfilePhotoViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIScrollViewDelegate, CropPhotoViewControllerDelegate {
 
+    var newUser: User!
+    var newPFUser: PFUser!
+    
     @IBOutlet var initials: UILabel!            // placeholder initials for profile picture
     @IBOutlet var profilePicture: UIImageView!  // profile picture
     
     var image: UIImage!     // image for profile picture
     
     
+    @IBAction func done(sender: AnyObject) {
+        let imageData = UIImageJPEGRepresentation(newUser.profilePicture, 0.50)
+        let parseImageFile = PFFile(name: "profile_pic.jpeg", data: imageData!)
+        newPFUser["profilePicture"] = parseImageFile
+        newPFUser.saveInBackgroundWithBlock { (success, error) -> Void in
+            
+        }
+        
+        performSegueWithIdentifier("finishSignup", sender: self)
+    }
     
     /*
      * Action to select photo for profile picture
@@ -50,9 +64,13 @@ class SetProfilePhotoViewController: UIViewController, UINavigationControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("hi")
+        // placeholder text
+
+
+        let index = newUser.firstName.startIndex
+        initials.text = String(newUser.firstName[index]) + String(newUser.lastName[index])
+
         
-        initials.text = "SZ"    // placeholder text
         
         
         // Make profile picture circular
@@ -83,6 +101,7 @@ class SetProfilePhotoViewController: UIViewController, UINavigationControllerDel
         initials.hidden = true
         self.image = image
         profilePicture.image = self.image
+        newUser.setProfilePicture(self.image)
     }
 
     

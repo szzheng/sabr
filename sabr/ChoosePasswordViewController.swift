@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import Parse
 
 class ChoosePasswordViewController: UIViewController, UITextFieldDelegate {
 
+    var newUser: User!
+    var newPFUser: PFUser!
+    
     @IBOutlet var password: UITextField!
     var activityIndicator = UIActivityIndicatorView()
     
@@ -36,7 +40,7 @@ class ChoosePasswordViewController: UIViewController, UITextFieldDelegate {
             UIApplication.sharedApplication().beginIgnoringInteractionEvents()
             
             // Update user password
-            user.password = password.text
+            newPFUser.password = password.text
             
             activityIndicator.stopAnimating()
             UIApplication.sharedApplication().endIgnoringInteractionEvents()
@@ -47,13 +51,10 @@ class ChoosePasswordViewController: UIViewController, UITextFieldDelegate {
     
     // Return to "Enter email" view, delete the create user from previous email submission
     @IBAction func goBack(sender: AnyObject) {
-        user.deleteInBackground()
+        newPFUser.deleteInBackground()
         performSegueWithIdentifier("fromChoosePasswordSegueToEnterEmail", sender: self)
     }
-    
-    @IBAction func testSegue(sender: AnyObject) {
-        performSegueWithIdentifier("testSegue", sender: self)
-    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -81,14 +82,19 @@ class ChoosePasswordViewController: UIViewController, UITextFieldDelegate {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if (segue.identifier == "continueWithPassword") {
+            let nextView = segue.destinationViewController as! SetProfilePhotoViewController
+            nextView.newUser = newUser
+            nextView.newPFUser = newPFUser
+        }
     }
-    */
+    
 
 }
