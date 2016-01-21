@@ -45,6 +45,8 @@ class CropPhotoViewController: UIViewController, UIScrollViewDelegate, UIGesture
     var photoToPhotoViewRatio: CGFloat!           // photo's height to photoView's height
     var differenceRatio: CGFloat!            // photoView's height not covered by photo's height to photoView's entire height
     
+    var photoAdjustedHeight: CGFloat!    // photo's height adjusted for view
+    
     // Mask layer
     var maskLayer: UIView!
     let maskWidthtoScreenWidthRatio: CGFloat! = 0.9
@@ -98,6 +100,8 @@ class CropPhotoViewController: UIViewController, UIScrollViewDelegate, UIGesture
         photoViewAspectRatio = UIScreen.mainScreen().bounds.width / UIScreen.mainScreen().bounds.height
         photoToPhotoViewRatio = photoViewAspectRatio / photoAspectRatio
         differenceRatio = 1.0 - photoToPhotoViewRatio
+        
+        photoAdjustedHeight = UIScreen.mainScreen().bounds.width / (photoAspectRatio)
 
         
         
@@ -194,6 +198,11 @@ class CropPhotoViewController: UIViewController, UIScrollViewDelegate, UIGesture
         scrollView.minimumZoomScale = minZoomScale
         scrollView.maximumZoomScale = maxZoomScale
         scrollView.zoomScale = 1.0
+        
+        if ((photoAdjustedHeight * scrollView.zoomScale) >= (maskSquare.height)) {
+            scrollView.minimumZoomScale = 1.0
+        }
+        
         
         // Do any additional setup after loading the view.
     }
@@ -298,45 +307,48 @@ class CropPhotoViewController: UIViewController, UIScrollViewDelegate, UIGesture
      */
     @IBAction func handlePan(recognizer: UIPanGestureRecognizer) {
         
-        
         let translation = recognizer.translationInView(self.view)
+        
   
         // offset bounds
         var maxXOffset: CGFloat
         var maxYOffset: CGFloat
         var minXOffset: CGFloat
         var minYOffset: CGFloat
+        
+        if ((photoAdjustedHeight * scrollView.zoomScale) >= (maskSquare.height)) {
+            // Panning for zoomed in view
+            if (scrollView.zoomScale >= 1.0) {
+                
+                maxXOffset = (photoView.frame.width - maskSquare.width) / 2
+                maxYOffset = (photoView.frame.height * photoToPhotoViewRatio - maskSquare.height) / 2
+                minXOffset = maxXOffset * -1;
+                minYOffset = maxYOffset * -1;
+                
+                
+                // Move photo
+                photoView.center = CGPoint(x: photoView.center.x + translation.x, y: photoView.center.y + translation.y)
+                
+                
+                // Reset photo to bounds if it passes bounds
+                resetToBounds(maxXOffset, minX: minXOffset, maxY: maxYOffset, minY: minYOffset)
+                
+                // Panning for zoomed out view
+            } else if (scrollView.zoomScale >= minZoomScale) {
+                
+                maxXOffset = maskSquare.origin.x
+                maxYOffset = maskSquare.origin.y - (differenceRatio * photoView.frame.height / 2.0)
+                minXOffset = maxXOffset - (photoView.frame.width - maskSquare.width)
+                minYOffset = maxYOffset - (photoView.frame.height * photoToPhotoViewRatio - maskSquare.height)
+                
+                
+                // Move photo
+                photoView.center = CGPoint(x: photoView.center.x + translation.x, y: photoView.center.y + translation.y)
+                
+                // Reset photo to bounds if it passes bounds
+                resetToBounds(maxXOffset, minX: minXOffset, maxY: maxYOffset, minY: minYOffset)
+            }
 
-        // Panning for zoomed in view
-        if (scrollView.zoomScale >= 1.0) {
-            
-            maxXOffset = (photoView.frame.width - maskSquare.width) / 2
-            maxYOffset = (photoView.frame.height * photoToPhotoViewRatio - maskSquare.height) / 2
-            minXOffset = maxXOffset * -1;
-            minYOffset = maxYOffset * -1;
-            
-            
-            // Move photo
-            photoView.center = CGPoint(x: photoView.center.x + translation.x, y: photoView.center.y + translation.y)
-            
-            
-            // Reset photo to bounds if it passes bounds
-            resetToBounds(maxXOffset, minX: minXOffset, maxY: maxYOffset, minY: minYOffset)
-            
-        // Panning for zoomed out view
-        } else if (scrollView.zoomScale >= minZoomScale) {
-            
-            maxXOffset = maskSquare.origin.x
-            maxYOffset = maskSquare.origin.y - (differenceRatio * photoView.frame.height / 2.0)
-            minXOffset = maxXOffset - (photoView.frame.width - maskSquare.width)
-            minYOffset = maxYOffset - (photoView.frame.height * photoToPhotoViewRatio - maskSquare.height)
-            
-            
-            // Move photo
-            photoView.center = CGPoint(x: photoView.center.x + translation.x, y: photoView.center.y + translation.y)
-            
-            // Reset photo to bounds if it passes bounds
-            resetToBounds(maxXOffset, minX: minXOffset, maxY: maxYOffset, minY: minYOffset)
         }
 
         // Reset translation
@@ -363,6 +375,7 @@ class CropPhotoViewController: UIViewController, UIScrollViewDelegate, UIGesture
      * Prevents scrolling while zooming
      */
     func scrollViewDidZoom(scrollView: UIScrollView) {
+        
         maintainScrollViewContentsPosition()
     }
     
