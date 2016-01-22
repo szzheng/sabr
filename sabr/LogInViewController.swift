@@ -9,7 +9,9 @@
 import UIKit
 import Parse
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class LogInViewController: UIViewController, UITextFieldDelegate {
+    
+    var user: PFUser!
     
     var activityIndicator = UIActivityIndicatorView()
     
@@ -80,17 +82,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
         } else {
             displayActivityIndicator()
             
-            var user = PFUser()
+            user = PFUser()
             user.username = username.text
             user.password = password.text
-            user.signUpInBackgroundWithBlock({ (sucess, error) -> Void in
+            user.signUpInBackgroundWithBlock({ (success, error) -> Void in
                 self.activityIndicator.stopAnimating()
                 UIApplication.sharedApplication().endIgnoringInteractionEvents()
                 
                 if (error == nil) {
                     
                     // Signup successful
-                    self.performSegueWithIdentifier("signup", sender: self)
+                    self.performSegueWithIdentifier("signUpSegue", sender: self)
                     
                 } else {
                     
@@ -135,6 +137,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        if (segue.identifier == "signup") {
+            let nextView = segue.destinationViewController as! EnterNameViewController
+            nextView.newPFUser = user
+        }
     }
 
 }

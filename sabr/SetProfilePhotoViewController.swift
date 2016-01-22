@@ -14,8 +14,10 @@ import Parse
  */
 class SetProfilePhotoViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIScrollViewDelegate, CropPhotoViewControllerDelegate {
 
-    var newUser: User!
-    var newPFUser: PFUser!
+    //var newUser: User!
+    var user: PFUser!
+    var firstName: String!
+    var lastName: String!
     
     @IBOutlet var initials: UILabel!            // placeholder initials for profile picture
     @IBOutlet var profilePicture: UIImageView!  // profile picture
@@ -24,14 +26,14 @@ class SetProfilePhotoViewController: UIViewController, UINavigationControllerDel
     
     
     @IBAction func done(sender: AnyObject) {
-        let imageData = UIImageJPEGRepresentation(newUser.profilePicture, 0.50)
+        let imageData = UIImageJPEGRepresentation(image, 0.50)
         let parseImageFile = PFFile(name: "profile_pic.jpeg", data: imageData!)
-        newPFUser["profilePicture"] = parseImageFile
-        newPFUser.saveInBackgroundWithBlock { (success, error) -> Void in
+        user["profilePicture"] = parseImageFile
+        user.saveInBackgroundWithBlock { (success, error) -> Void in
             
         }
         
-        performSegueWithIdentifier("finishSignup", sender: self)
+        performSegueWithIdentifier("finishSignUp", sender: self)
     }
     
     /*
@@ -67,8 +69,8 @@ class SetProfilePhotoViewController: UIViewController, UINavigationControllerDel
         // placeholder text
 
 
-        let index = newUser.firstName.startIndex
-        initials.text = String(newUser.firstName[index]) + String(newUser.lastName[index])
+        let index = firstName.startIndex
+        initials.text = String(firstName[index]) + String(lastName[index])
 
         
         
@@ -101,7 +103,7 @@ class SetProfilePhotoViewController: UIViewController, UINavigationControllerDel
         initials.hidden = true
         self.image = image
         profilePicture.image = self.image
-        newUser.setProfilePicture(self.image)
+        //newUser.setProfilePicture(self.image)
     }
 
     

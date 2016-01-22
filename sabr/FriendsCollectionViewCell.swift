@@ -10,7 +10,7 @@ import UIKit
 
 class FriendsCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet var profileName: UILabel!
+    //@IBOutlet var profileName: UILabel!
     @IBOutlet var profilePicture: UIImageView!
     
 

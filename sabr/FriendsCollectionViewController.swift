@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import Parse
 
 private let reuseIdentifier = "FriendCell"
 
 class FriendsCollectionViewController: UICollectionViewController {
+    
+    var user:PFUser!
 
     var profileName = "Siberian Husky"
     var profilePicture = UIImage(named: "Siberian Husky.jpg")
@@ -25,7 +28,15 @@ class FriendsCollectionViewController: UICollectionViewController {
         //self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
+        
+        user = PFUser.currentUser()
+        PFUser.becomeInBackground((user.sessionToken)!) { (user, error) -> Void in
+            
+        }
+        
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -46,20 +57,20 @@ class FriendsCollectionViewController: UICollectionViewController {
 
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 3
     }
 
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 9
+        return 3
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell: FriendsCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! FriendsCollectionViewCell
     
         // Configure the cell
-        cell.profileName.text = profileName
+       // cell.profileName.text = profileName
         cell.profilePicture.image = profilePicture
         cell.profilePicture.layer.cornerRadius = cell.profilePicture.frame.size.width/2
         cell.profilePicture.layer.borderColor = UIColor.darkGrayColor().CGColor
