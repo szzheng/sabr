@@ -43,10 +43,28 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             newPFUser.username = emailAddress.text
             newPFUser.password = password.text
             newPFUser.email = emailAddress.text
+            
+            
             // other fields can be set just like with PFObject
             //user["phone"] = "415-392-0202"
             newPFUser["firstname"] = firstName.text
             newPFUser["lastname"] = lastName.text
+            
+            newPFUser["city"] = ""
+            newPFUser["dateOfBirth"] = ""
+            newPFUser["description"] = ""
+            newPFUser["phoneNumber"] = ""
+            newPFUser["emailAddress"] = ""
+            
+            newPFUser["friends"] = []
+            newPFUser["posts"] = []
+            newPFUser["locations"] = []
+            newPFUser["photos"] = []
+            newPFUser["albums"] = []
+            newPFUser["profilePicture"] = NSNull()
+            
+            
+            
             
             // Sign user up into Parse database
             newPFUser.signUpInBackgroundWithBlock({ (success, error) -> Void in
@@ -103,6 +121,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationBarHidden = true
+        
         self.firstName.delegate = self
         self.lastName.delegate = self
         self.emailAddress.delegate = self

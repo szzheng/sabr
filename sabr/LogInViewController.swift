@@ -54,7 +54,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                 if (user != nil) {
                     
                     // Login successful
-                    self.performSegueWithIdentifier("login", sender: self)
+                    self.performSegueWithIdentifier("loginSegue", sender: self)
                     
                 } else {
                     if let errorString = error!.userInfo["error"] as? String {
@@ -69,42 +69,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func signUp(sender: AnyObject) {
         
-        
-        self.performSegueWithIdentifier("signup", sender: self)
-        
    
-        // bad sign up info
-        if (username.text == "" || password.text == "") {
-
-            displayAlert("Error in signup info", message: "Please enter username and password")
-            
-        // good sign up info
-        } else {
-            displayActivityIndicator()
-            
-            user = PFUser()
-            user.username = username.text
-            user.password = password.text
-            user.signUpInBackgroundWithBlock({ (success, error) -> Void in
-                self.activityIndicator.stopAnimating()
-                UIApplication.sharedApplication().endIgnoringInteractionEvents()
-                
-                if (error == nil) {
-                    
-                    // Signup successful
-                    self.performSegueWithIdentifier("signUpSegue", sender: self)
-                    
-                } else {
-                    
-                    if let errorString = error!.userInfo["error"] as? String {
-                        
-                        self.errorMessage = errorString
-                    }
-                    
-                    self.displayAlert("Failed signup", message: self.errorMessage)
-                }
-            })
-        } 
+        performSegueWithIdentifier("signUpSegue", sender: self)
 
     }
     
@@ -143,8 +109,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if (segue.identifier == "signup") {
-            let nextView = segue.destinationViewController as! EnterNameViewController
+        if (segue.identifier == "signUpSegue") {
+            let nextView = segue.destinationViewController as! SignUpViewController
             nextView.newPFUser = user
         }
     }

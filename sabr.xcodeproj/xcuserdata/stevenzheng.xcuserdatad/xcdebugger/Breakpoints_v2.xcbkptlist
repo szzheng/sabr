@@ -30,7 +30,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "59"
-            endingLineNumber = "59">
+            endingLineNumber = "59"
+            landmarkName = "numberOfSectionsInCollectionView(_:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -109,6 +111,240 @@
             endingLineNumber = "71"
             landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "sabr/FavoritesViewController.swift"
+            timestampString = "475788118.556203"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "FavoritesViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "sabr.FavoritesViewController.myProfileTableView.getter : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITableView&gt;"
+                  moduleName = "sabr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stevenzheng/Google%20Drive/sabr/sabr/FavoritesViewController.swift"
+                  timestampString = "475785935.697713"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "sabr.FavoritesViewController.myProfileTableView.setter : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITableView&gt;"
+                  moduleName = "sabr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stevenzheng/Google%20Drive/sabr/sabr/FavoritesViewController.swift"
+                  timestampString = "475785935.700406"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "sabr.FavoritesViewController.myProfileTableView.materializeForSet : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITableView&gt;"
+                  moduleName = "sabr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stevenzheng/Google%20Drive/sabr/sabr/FavoritesViewController.swift"
+                  timestampString = "475785935.700588"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "sabr.FavoritesViewController.init (sabr.FavoritesViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; sabr.FavoritesViewController"
+                  moduleName = "sabr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stevenzheng/Google%20Drive/sabr/sabr/FavoritesViewController.swift"
+                  timestampString = "475785935.700727"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "sabr.FavoritesViewController.init (sabr.FavoritesViewController.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;sabr.FavoritesViewController&gt;"
+                  moduleName = "sabr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stevenzheng/Google%20Drive/sabr/sabr/FavoritesViewController.swift"
+                  timestampString = "475785935.700866"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "sabr/InfoEditViewController.swift"
+            timestampString = "476668463.894814"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "done(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "sabr/ActivityViewController.swift"
+            timestampString = "477130740.005773"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "sabr/Activity.swift"
+            timestampString = "477213838.585841"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "Activity"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "sabr/ActivityFeedViewController.swift"
+            timestampString = "477250336.328018"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "ActivityFeedViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "sabr.ActivityFeedViewController.activities.getter : Swift.ImplicitlyUnwrappedOptional&lt;Swift.Array&lt;__ObjC.PFObject&gt;&gt;"
+                  moduleName = "sabr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stevenzheng/Google%20Drive/sabr/sabr/ActivityFeedViewController.swift"
+                  timestampString = "477250336.358139"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "sabr.ActivityFeedViewController.activities.setter : Swift.ImplicitlyUnwrappedOptional&lt;Swift.Array&lt;__ObjC.PFObject&gt;&gt;"
+                  moduleName = "sabr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stevenzheng/Google%20Drive/sabr/sabr/ActivityFeedViewController.swift"
+                  timestampString = "477250336.358526"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "sabr.ActivityFeedViewController.activities.materializeForSet : Swift.ImplicitlyUnwrappedOptional&lt;Swift.Array&lt;__ObjC.PFObject&gt;&gt;"
+                  moduleName = "sabr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stevenzheng/Google%20Drive/sabr/sabr/ActivityFeedViewController.swift"
+                  timestampString = "477250336.35881"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "sabr.ActivityFeedViewController.init (sabr.ActivityFeedViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; sabr.ActivityFeedViewController"
+                  moduleName = "sabr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stevenzheng/Google%20Drive/sabr/sabr/ActivityFeedViewController.swift"
+                  timestampString = "477250336.35904"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "312">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "sabr.ActivityFeedViewController.init (sabr.ActivityFeedViewController.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;sabr.ActivityFeedViewController&gt;"
+                  moduleName = "sabr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stevenzheng/Google%20Drive/sabr/sabr/ActivityFeedViewController.swift"
+                  timestampString = "477250336.359261"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "256">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

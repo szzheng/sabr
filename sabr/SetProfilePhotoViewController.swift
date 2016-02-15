@@ -33,7 +33,9 @@ class SetProfilePhotoViewController: UIViewController, UINavigationControllerDel
             
         }
         
-        performSegueWithIdentifier("finishSignUp", sender: self)
+        //let viewControllers = self.navigationController!.viewControllers
+        self.navigationController!.popToRootViewControllerAnimated(true)
+        //performSegueWithIdentifier("finishSignUpSegue", sender: self)
     }
     
     /*
@@ -67,10 +69,10 @@ class SetProfilePhotoViewController: UIViewController, UINavigationControllerDel
         super.viewDidLoad()
         
         // placeholder text
-
+        navigationController?.navigationBarHidden = true
 
         let index = firstName.startIndex
-        initials.text = String(firstName[index]) + String(lastName[index])
+        initials.text = String(firstName[index]).capitalizedString + String(lastName[index]).capitalizedString
 
         
         
